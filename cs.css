@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.top-header {
+    background-color: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header-item i {
+    color: #ff6b9d;
+    font-size: 12px;
+}
+
+.separator {
+    width: 1px;
+    height: 20px;
+    background-color: #ccc;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.trustpilot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.stars i {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.trustpilot span {
+    font-size: 12px;
+    color: #333;
+}
+
+.start-planning-btn {
+    background-color: #ff6b9d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-planning-btn:hover {
+    background-color: #e55a8a;
+}
+
+.main-nav {
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    flex: 0 0 auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text .travel {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.logo-text .destination {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+}
+
+.logo-text .destination::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: #ff6b9d;
+    border-radius: 50%;
+}
+
+.logo-text .destination::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #ff6b9d;
+    border-radius: 50%;
+}
+
+.search-container {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 40px;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #ff6b9d;
+}
+
+.search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff6b9d;
+    font-size: 16px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    flex: 0 0 auto;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff6b9d;
+}
+
+.nav-link i {
+    font-size: 10px;
+    color: #ff6b9d;
+}
+
+.breadcrumbs {
+    background-color: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.breadcrumbs span {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.trip-finder {
+    background: url('photos/beach.avif') center/cover no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.trip-finder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.trip-finder-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.trip-finder-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.trip-finder-subtitle {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 60px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.form-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.form-field {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px 30px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-field:hover {
+    border-color: #ff6b9d;
+    box-shadow: 0 2px 8px rgba(255, 107, 157, 0.1);
+}
+
+.field-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-field i {
+    color: #333;
+    font-size: 12px;
+}
+
+.take-me-there-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 1px;
+}
+
+.take-me-there-btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-left,
+    .header-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .search-container {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .trip-finder-title {
+        font-size: 36px;
+    }
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-field {
+        min-width: 280px;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trip-finder-title {
+        font-size: 28px;
+    }
+
+    .trip-finder-subtitle {
+        font-size: 16px;
+    }
+
+    .form-field {
+        min-width: 250px;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+}
